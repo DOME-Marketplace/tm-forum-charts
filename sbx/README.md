@@ -1,6 +1,6 @@
 # tm-forum-api
 
-![Version: 0.14.16](https://img.shields.io/badge/Version-0.14.16-informational?style=flat-square) ![AppVersion: 0.13.2](https://img.shields.io/badge/AppVersion-0.13.2-informational?style=flat-square)
+![Version: 0.14.17](https://img.shields.io/badge/Version-0.14.17-informational?style=flat-square) ![AppVersion: 0.13.2](https://img.shields.io/badge/AppVersion-0.13.2-informational?style=flat-square)
 A Helm chart for running the FIWARE TMForum-APIs
 
 ## Maintainers
