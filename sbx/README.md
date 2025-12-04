@@ -1,4 +1,4 @@
-# tm-forum-api
+# tm-forum-api SBX
 
 ![Version: 0.14.15](https://img.shields.io/badge/Version-0.14.15-informational?style=flat-square) ![AppVersion: 0.13.2](https://img.shields.io/badge/AppVersion-0.13.2-informational?style=flat-square)
 A Helm chart for running the FIWARE TMForum-APIs
