@@ -36,13 +36,13 @@ jobs:
 
         - name: Update chart dependencies
           run: |
-            cd sbx
+            cd charts/tm-forum-api-sbx
             helm dependency update
 
         - name: Run chart-releaser
           uses: helm/chart-releaser-action@v1.5.0
           with:
-            charts_dir: .
+            charts_dir: charts
             charts_repo_url: https://dome-marketplace.github.io/tm-forum-charts
           env:
             CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

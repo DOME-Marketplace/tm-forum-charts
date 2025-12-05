@@ -93,14 +93,14 @@ jobs:
           for file in ${{ steps.changed-files.outputs.all_changed_and_modified_files }}; do
               echo "$file was changed"
               baseFolder=$(cut -d'/' -f1 <<< "$file")
-              if [ "$baseFolder" = "sbx" ]; then
+              if [ "$baseFolder" = "charts" ]; then
                   chartChanged=true
               fi
           done
 
           if [ "$chartChanged" = true ]; then
               # get version from chart yaml
-              version=$(yq e '.version' "sbx/Chart.yaml")
+              version=$(yq e '.version' "charts/tm-forum-api-sbx/Chart.yaml")
               major=$(cut -d'.' -f1 <<< "$version")
               minor=$(cut -d'.' -f2 <<< "$version")
               patch=$(cut -d'.' -f3 <<< "$version")
@@ -121,9 +121,9 @@ jobs:
                   patch=$((patch+1))
               fi
               echo Update version to $major.$minor.$patch for tm-forum-api chart
-              yq e -i '.version = "'$major.$minor.$patch'"' sbx/Chart.yaml
+              yq e -i '.version = "'$major.$minor.$patch'"' charts/tm-forum-api-sbx/Chart.yaml
           else
-              echo "No changes detected in sbx/ directory, skipping version update"
+              echo "No changes detected in charts/ directory, skipping version update"
           fi
 
       - name: generate docs
