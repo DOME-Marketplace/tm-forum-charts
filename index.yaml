@@ -5,6 +5,35 @@ entries:
       charts.openshift.io/name: tm-forum-api
     apiVersion: v2
     appVersion: 0.13.2
+    created: "2026-02-06T07:18:33.292633694Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.1.2
+    description: A Helm chart for running the FIWARE TMForum-APIs
+    digest: 9964b0510b5833d4501bdead22508738ae9b56a69366f5b1564c44d6e2c5017e
+    home: https://github.com/DOME-Marketplace/tmforum-api
+    icon: https://fiware.github.io/catalogue/img/fiware.png
+    keywords:
+    - fiware
+    - tmforum
+    kubeVersion: '>= 1.19-0'
+    maintainers:
+    - email: stefan.wiedemann@fiware.org
+      name: wistefan
+    - email: d.ros@libelium.com
+      name: droslbl
+    name: tm-forum-api
+    sources:
+    - https://github.com/DOME-Marketplace/tmforum-api
+    urls:
+    - https://github.com/DOME-Marketplace/tm-forum-charts/releases/download/tm-forum-api-0.14.23/tm-forum-api-0.14.23.tgz
+    version: 0.14.23
+  - annotations:
+      charts.openshift.io/name: tm-forum-api
+    apiVersion: v2
+    appVersion: 0.13.2
     created: "2026-02-05T11:58:07.792864116Z"
     dependencies:
     - condition: redis.enabled
@@ -146,4 +175,4 @@ entries:
     urls:
     - https://github.com/DOME-Marketplace/tm-forum-charts/releases/download/tm-forum-api-0.14.18/tm-forum-api-0.14.18.tgz
     version: 0.14.18
-generated: "2026-02-05T11:58:07.792889764Z"
+generated: "2026-02-06T07:18:33.292651577Z"
