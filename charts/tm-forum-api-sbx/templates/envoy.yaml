@@ -27,7 +27,11 @@ spec:
         - name: envoy-proxy
           imagePullPolicy:  {{ .Values.apiProxy.image.pullPolicy }}
           image: "{{ .Values.apiProxy.image.repository }}:{{ .Values.apiProxy.image.tag }}"
-          args: 
+          {{- with .Values.apiProxy.resources }}
+          resources:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          args:
             - -c /config/envoy-config.yaml
             - -l debug
           ports:
