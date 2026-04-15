@@ -145,7 +145,7 @@ defaultConfig:
     # -- repository to get the container from
     repository: docker.io/drllbl18
     # -- tag to be used, most of the time the apis will use the same version
-    tag: sbx_1.4.9
+    tag: sbx_1.5.4
     # -- pull policy to be used
     pullPolicy: IfNotPresent
   # -- log level of the api
@@ -257,13 +257,13 @@ apiProxy:
       maxUnavailable: 0
   # -- api proxy resource requests and limits, we leave the default empty to make that a concious choice by the user.
   # for the autoscaling to make sense, you should configure this.
-  # resources:
-    # limits:
-      # cpu: 100m
-      # memory: 128Mi
-    # requests:
-      # cpu: 100m
-      # memory: 128Mi
+  resources: {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
 
 # -- list of apis to be deployed
 # -- every api needs to define a name and image. Basepath is required when routes or ingress will be enabled. Beside that, they can overwrite the default-config by using the same keys.

@@ -1,6 +1,6 @@
 apiVersion: v2
 name: tm-forum-api
-version: 0.14.23
+version: 0.14.25
 appVersion: 0.13.2
 kubeVersion: '>= 1.19-0'
 home: https://github.com/DOME-Marketplace/tmforum-api
@@ -14,8 +14,6 @@ sources:
 maintainers:
   - name: wistefan
     email: stefan.wiedemann@fiware.org
-  - name: droslbl
-    email: d.ros@libelium.com
 annotations:
   charts.openshift.io/name: tm-forum-api
 dependencies:
