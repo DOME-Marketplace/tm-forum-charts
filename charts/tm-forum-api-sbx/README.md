@@ -1,6 +1,6 @@
 # tm-forum-api
 
-![Version: 0.14.23](https://img.shields.io/badge/Version-0.14.23-informational?style=flat-square) ![AppVersion: 0.13.2](https://img.shields.io/badge/AppVersion-0.13.2-informational?style=flat-square)
+![Version: 0.14.24](https://img.shields.io/badge/Version-0.14.24-informational?style=flat-square) ![AppVersion: 0.13.2](https://img.shields.io/badge/AppVersion-0.13.2-informational?style=flat-square)
 A Helm chart for running the FIWARE TMForum-APIs
 
 ## Maintainers
@@ -77,6 +77,7 @@ For all untouched values, the customized deployement will still use the defaults
 | apiProxy.image.tag | string | `"v1.27-latest"` | tag to be used |
 | apiProxy.nodeSelector | object | `{}` | selector template ref: https://kubernetes.io/docs/user-guide/node-selection/ |
 | apiProxy.replicaCount | int | `1` | initial number of target replications, can be different if autoscaling is enabled |
+| apiProxy.resources | object | `{}` | api proxy resource requests and limits, we leave the default empty to make that a concious choice by the user. for the autoscaling to make sense, you should configure this. |
 | apiProxy.revisionHistoryLimit | int | `3` | number of old replicas to be retained |
 | apiProxy.service | object | `{"annotations":{},"nameOverride":null,"port":8080,"type":"ClusterIP"}` | configuration for the proxy service |
 | apiProxy.service.annotations | object | `{}` | addtional annotations, if required |
@@ -109,10 +110,10 @@ For all untouched values, the customized deployement will still use the defaults
 | defaultConfig.cache.subscriptions.maximumSize | int | `1000` | maximum size of the cache |
 | defaultConfig.contextUrl | string | `"https://smartdatamodels.org/context.jsonld"` | default context to be used when contacting the context broker |
 | defaultConfig.endpointsPort | int | `9090` | metrics and health port |
-| defaultConfig.image | object | `{"pullPolicy":"IfNotPresent","repository":"docker.io/drllbl18","tag":"sbx_1.4.9"}` | configuration to be used for the image of the container |
+| defaultConfig.image | object | `{"pullPolicy":"IfNotPresent","repository":"docker.io/drllbl18","tag":"sbx_1.5.4"}` | configuration to be used for the image of the container |
 | defaultConfig.image.pullPolicy | string | `"IfNotPresent"` | pull policy to be used |
 | defaultConfig.image.repository | string | `"docker.io/drllbl18"` | repository to get the container from |
-| defaultConfig.image.tag | string | `"sbx_1.4.9"` | tag to be used, most of the time the apis will use the same version |
+| defaultConfig.image.tag | string | `"sbx_1.5.4"` | tag to be used, most of the time the apis will use the same version |
 | defaultConfig.livenessProbe.healthPath | string | `"/health/liveness"` | path to be used for the health check |
 | defaultConfig.livenessProbe.initialDelaySeconds | int | `30` |  |
 | defaultConfig.livenessProbe.periodSeconds | int | `10` |  |
