@@ -190,4 +190,3 @@ This chart is maintained by the DOME Marketplace project.
 ## Maintainers
 
 - Stefan Wiedemann (@wistefan) - stefan.wiedemann@fiware.org
-- Daniel Ros (@droslbl) - d.ros@libelium.com

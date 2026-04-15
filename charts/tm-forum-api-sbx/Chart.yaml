@@ -14,8 +14,6 @@ sources:
 maintainers:
   - name: wistefan
     email: stefan.wiedemann@fiware.org
-  - name: droslbl
-    email: d.ros@libelium.com
 annotations:
   charts.openshift.io/name: tm-forum-api
 dependencies:

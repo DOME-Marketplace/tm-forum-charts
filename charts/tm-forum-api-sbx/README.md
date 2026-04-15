@@ -8,7 +8,6 @@ A Helm chart for running the FIWARE TMForum-APIs
 | Name | Email | Url |
 | ---- | ------ | --- |
 | wistefan | <stefan.wiedemann@fiware.org> |  |
-| droslbl | <d.ros@libelium.com> |  |
 
 ## Individual Configuration
 
